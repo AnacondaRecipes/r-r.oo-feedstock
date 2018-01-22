@@ -10,8 +10,8 @@ package:
 source:
   fn: R.oo_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/R.oo_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/R.oo/R.oo_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/R.oo_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/R.oo/R.oo_{{ version }}.tar.gz
   sha256: 645ceec2f815ed39650ca72db87fb4ece7357857875a4ec73e18bfaf647f431c
 
 
