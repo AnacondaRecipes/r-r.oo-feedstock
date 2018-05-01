@@ -1,4 +1,4 @@
-{% set version = '1.21.0' %}
+{% set version = '1.22.0' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,18 +12,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/R.oo_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/R.oo/R.oo_{{ version }}.tar.gz
-  sha256: 645ceec2f815ed39650ca72db87fb4ece7357857875a4ec73e18bfaf647f431c
-
-
-  # patches:
-   # List any patch files here
-   # - fix.patch
+  sha256: c0862e4608fb2b8f91ec4494d46c2f3ba7bc44999f9aa3d7b9625d3792e7dd4c
 
 build:
   merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
   number: 0
-
 
   # This is required to make R link correctly on Linux.
   rpaths:
@@ -73,11 +67,11 @@ extra:
 # The original CRAN metadata for this package was:
 
 # Package: R.oo
-# Version: 1.21.0
+# Version: 1.22.0
 # Depends: R (>= 2.13.0), R.methodsS3 (>= 1.7.1)
 # Imports: methods, utils
 # Suggests: tools
-# Date: 2016-10-30
+# Date: 2018-04-21
 # Title: R Object-Oriented Programming with or without References
 # Authors@R: c(person("Henrik", "Bengtsson", role=c("aut", "cre", "cph"), email = "henrikb@braju.com"))
 # Author: Henrik Bengtsson [aut, cre, cph]
@@ -88,9 +82,9 @@ extra:
 # URL: https://github.com/HenrikBengtsson/R.oo
 # BugReports: https://github.com/HenrikBengtsson/R.oo/issues
 # NeedsCompilation: no
-# Packaged: 2016-10-31 16:46:50 UTC; hb
+# Packaged: 2018-04-22 00:03:47 UTC; hb
 # Repository: CRAN
-# Date/Publication: 2016-11-01 00:03:19
+# Date/Publication: 2018-04-22 03:23:04 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for
